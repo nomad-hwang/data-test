@@ -6,4 +6,10 @@ format:
 	black $(BLACK_OPTIONS) .
 
 run:
-	pipenv run python main.py
+	pipenv run python engine/main.py
+
+test:
+	pipenv run python -m unittest discover tests
+
+load_test_data:
+	pipenv run python scripts/load_trade_data
